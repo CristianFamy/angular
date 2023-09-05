@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+ <!-- 
+<div ng-app=""  ng-init="quantity=1;cost=5;dolar=900">
+  <p>Total in dollar: {{ quantity * cost }}</p>
+  <p>Total in dollar: {{ dolar }}</p>
+</div>
+-->
+
+<!--  
+<div ng-app="DeDolarApeso" ng-controller="ctrl">
+  <select name="select">
+    <option value="celular" selected>Celular</option>
+  </select>  
+  <label>Cotizacion dolar:</label>  
+  <input type="text" ng-model="coti">
+  <label>Precio dolar:</label>  
+  <input type="text" ng-model="dolar">
+  <br>
+  <p>Precio: {{ coti * dolar }}</p>
+</div>
+-->
+
+<div ng-app="DeDolarApeso" ng-controller="ctrl">
+  <select name="select">
+    <option value="celular" selected>Celular</option>
+  </select>  
+  <p>Cotizacion dolar: {{coti}}</p>
+  <p>Precio dolar: {{dolar}}</p>
+  <p>Precio: {{ coti * dolar }}</p>
+</div>
+
+
+<script>
+ var moneda = angular.module('DeDolarApeso',[]);
+  moneda.controller('ctrl', function($scope){
+    $scope.coti = 900;
+    $scope.dolar = 77.78;
+ });
+</script>
+</body>
+</html>
